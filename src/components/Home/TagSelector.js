@@ -13,8 +13,9 @@ export default class TagSelector extends React.Component {
   }
 
   render() {
+    let t = this;
     let tags = this.props.tags.map(function(tag, index){
-      return <TagSelectorItem key={index} tag={tag} />
+      return <TagSelectorItem tag_selector_id={t.props.id} key={index} tag={tag} />
     });
     return (
       <div className="tags row">

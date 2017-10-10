@@ -15,8 +15,8 @@ export default class TagSelectorItem extends React.Component {
     return (
       <div className="col-4">
         <div className="ui toggle checkbox">
-          <input type="checkbox" id={this.props.tag.name} name="public" defaultChecked={this.props.tag.selected} />
-          <label htmlFor={this.props.tag.name}>{this.props.tag.name}</label>
+          <input type="checkbox" id={this.props.tag_selector_id + '_' + this.props.tag.name} name="public" defaultChecked={this.props.tag.selected} />
+          <label htmlFor={this.props.tag_selector_id + '_' + this.props.tag.name}>{this.props.tag.name}</label>
         </div>
       </div>
     );

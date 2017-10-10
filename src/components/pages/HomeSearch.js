@@ -38,7 +38,7 @@ export default class HomeSearch extends React.Component {
           <div className="divider"></div>
           <div>
             <div className="title">Tags:</div>
-            <TagSelector tags={this.props.tags} />
+            <TagSelector id='tag_selector_search' tags={this.props.tags} />
           </div>
         </div>
         <div className="divider"></div>

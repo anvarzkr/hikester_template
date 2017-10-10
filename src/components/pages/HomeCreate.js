@@ -40,7 +40,7 @@ export default class HomeCreate extends React.Component {
           <div className="divider"></div>
           <div>
             <div className="title">Tags:</div>
-            <TagSelector tags={this.props.tags} />
+            <TagSelector id='tag_selector_create' tags={this.props.tags} />
           </div>
           <div className="mt-3 mb-0 alert alert-warning" role="alert">
             Before creating an event choose place on the map
