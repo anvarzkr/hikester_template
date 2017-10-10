@@ -1,29 +1,22 @@
 import React from 'react';
-import Navbar from './Navbar';
-import MainMap from '../Map/MainMap';
+import { Switch, Route } from 'react-router-dom';
+import Home from '../pages/Home';
+import Event from '../pages/Event';
+import Profile from '../pages/Profile';
+import Header from './Header';
+import Footer from './Footer';
 
-class MainLayout extends React.Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
-  render() {
-    console.log(this.props.children);
-    return (
-      <div>
-        <Navbar />
-        <div className="flex">
-          {this.props.children}
-          <div className="flex-60 content-map">
-            <MainMap className="map" />
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-}
+const MainLayout = () => (
+  <div>
+    <Header />
+    <div id="content">
+      <Switch>
+        <Route exact path="/" component={Home}/>
+        <Route exact path="/event" component={Event}/>
+        <Route exact path="/profile" component={Profile}/>
+      </Switch>
+    </div>
+  </div>
+);
 
 export default MainLayout;

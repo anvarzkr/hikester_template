@@ -1,13 +1,14 @@
 header {
-  background-color: #fff;
-  height: 60px;
+  background-color: #12b591;
+  color: #fff;
+  height: 44px;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 999;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 1px;
+  /*border-bottom: 1px solid #ccc;*/
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 header .container {
@@ -17,142 +18,98 @@ header .container {
   height: 100%;
 }
 
-header ul {
-  margin-bottom: 0px;
-}
-
-header li.logo {
-  position: relative;
-  top: -2px;
-  display: inline-block;
-  /*border-left: 1px solid #202020*/
-}
-header li.logo .logo-image {
-  position: relative;
-  top: -1px;
-  height: 40px;
-  color: #000;
-}
-header li.button-menu {
-  background-color: rgb(0, 115, 190);
-}
-header li.button-menu button {
-  background-color: transparent;
-  border: none;
-}
-header li.button-menu a,
-header li.button-menu button {
-  color: #fff;
-}
-header li.button-menu:hover {
-  background-color: rgb(0, 132, 195);
-  color: #fff;
-}
-header ul li {
-  display: inline-block;
-  /*border-right: 1px solid #202020;*/
-}
-header .header-menu-right ul li {
-  /*border-left: 1px solid #202020;*/
-}
-header ul li a,
-header ul li button {
-  color: #000;
-  display: block;
-  line-height: 60px;
-  /*height: 100%;*/
-  padding: 0 20px 0;
-  /*text-transform: none;*/
-}
-
-header ul.menu-items {
-  padding-left: 0px;
-  margin-bottom: 0px;
-  display: inline-block;
-}
-header .menu-items li a i,
-header .menu-items li button i {
-  display: none;
-}
-
-header .header-menu-right {
-  float: right;
-}
-
-header i.fa {
-  line-height: 60px;
-}
-
-
-.header-menu {
+/*header .left {
   float: left;
-  height: 100%;
 }
-.header-menu-right {
+
+header .right {
   float: right;
+}*/
+
+header .menu-item {
+  padding: 0 15px;
+  display: flex;
+  color: #fff;
+  align-items: center;
+  font-weight: 300;
+  font-size: 17px;
+  text-transform: none;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
 }
-
-.header-border {
-  position: absolute;
-  top: 60px;
-  left: 0;
-  height: 10px;
-  width: 100%;
-  background-color: rgb(250, 193, 12);
-}
-
-
-/*
-  MENU
-*/
-
-.menu-toggle-button:hover {
-  color: #777;
+header .menu-item:hover {
+  background-color: #11a786;
   cursor: pointer;
 }
 
-
-/* MOBILES */
-@media (max-width: 767px) {
-  #menu-toggle:checked + .container .menu-items-parent {
-    display: block !important;
-  }
-
-  header .header-menu {
-    background-color: #fff;
-  }
-
-  #menu-toggle:checked + .container .header-menu ul.menu-items {
-    display: block !important;
-  }
-
-  header ul.menu-items {
-    display: none;
-    background-color: #fff;
-    position: fixed;
-    top: 60px;
-    left: 0;
-    width: 100%;
-  }
-
-  header .menu-items li {
-    display: block;
-    border-bottom: 1px solid #404040;
-  }
-
-  header .menu-items li:hover a i,
-  header .menu-items li:hover button i {
-    color: #fff;
-  }
-
-  header .menu-items li a i,
-  header .menu-items li button i {
-    display: inline-block;
-    float: right;
-  }
+header .logo {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
 }
 
-/* TABLETS */
-@media (min-width: 768px) and (max-width: 991px) {
+header .logo .logo-image {
+  height: 40px;
+}
 
+header .menu-item.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+header .dropdown-content {
+  padding: 5px 0;
+  background-color: #fff;
+  color: #000;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -40px;
+  min-width: 160px;
+  border: 1px solid rgba(0, 0, 0, .15);
+  border-radius: 2px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+  text-shadow: none;
+}
+header .dropdown-content ul {
+  padding: 0;
+  text-transform: none;
+}
+header .dropdown-content ul li {
+  line-height: 1.4;
+  list-style: none;
+  font-size: 14px;
+  font-weight: 400;
+}
+header .dropdown-content ul li.dropdown-item {
+  padding: 10px 20px;
+}
+header .dropdown-content ul li.dropdown-item:hover {
+  background-color: #f5f5f5
+}
+header .dropdown-content ul li.divider {
+  background-color: #e5e5e5;
+  height: 1px;
+  margin: 9px 0;
+  overflow: hidden;
+}
+
+header .dropdown-title {
+  padding-right: 5px;
+}
+
+header .dropdown-title:after {
+  position: relative;
+  top: 15px;
+  left: 8px;
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+
+  border-top: 5px solid #fff;
+}
+
+header .dropdown-title .dropdown-photo {
+  width: 30px;
+  height: 30px;
 }

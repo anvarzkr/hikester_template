@@ -3,71 +3,101 @@ html {
   position: relative;
 }
 
+*:focus {
+  outline: none;
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+button:focus {outline:0 !important;}
+
 body {
-  min-height: (100% - 60px);
-  margin-top: 60px;
+  min-height: (100% - 44px);
+  /*margin-top: 44px;*/
+  padding-top: 44px;
   font-family: 'Ubuntu';
 }
 
-a {
-  color: #000;
+#content {
+  display: flex;
+  height: calc(100vh - 44px);
 }
-a:hover {
-  color: rgb(0, 104, 180);
-  text-decoration: none;
+#content .page-section {
+  max-height: 100%;
+  /*overflow: hidden;
+  overflow-y: scroll;*/
 }
 
-.flex {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
+input,
+textarea {
+  border: 1px solid #12b591;
+  background-color: #fff;
+  width: 100%;
+  font-size: 16px;
+  color: #555;
+  padding: 10px 16px;
 }
-.flex .flex-50 {
-  display: flex;
-  width: 50vw;
+textarea {
+  resize-x: none;
+  min-height: 150px;
 }
-.flex .flex-40 {
-  display: flex;
-  width: 35vw;
+
+input:focus,
+textarea:focus {
+  border-color: #15d8ae;
 }
-.flex .flex-60 {
-  display: flex;
-  width: 65vw;
+
+input.input-text {
+
+}
+
+.input-date-group {
+  position: relative;
+}
+
+.input-date-group input.input-date {
+  padding-left: 32px;
+}
+
+.input-date-group .input-date-icon {
+  position: absolute;
+  left: 10px;
+  top: 14px;
 }
 
 .button {
-  display: inline-block;
-  background-color: rgb(0, 104, 180);
-  padding: 15px;
-  border: 0;
+  text-align: center;
+  padding: 10px 15px;
+  background-color: #12b591;
   color: #fff;
-  font-weight: 600;
+  border: 1px solid #109678;
 }
 .button:hover {
-  background-color: rgb(0, 132, 195);
   cursor: pointer;
+  background-color: #12bc97;
 }
-.button.submit {
+.button-fluid {
   width: 100%;
-  padding: 10px;
-  background-color: #11AB69;
-}
-.button.submit:hover {
-  background-color: #13C277;
+  padding: 15px 20px;
 }
 
-.info-block {
-  background-color: #F5F25C;
-  padding: 10px;
+.panel .title {
+  margin-bottom: 15px;
+  font-size: 16px;
 }
 
-.warning:before {
-  content: '!';
-  color: #f00;
-  font-size: 30px;
-  font-weight: 600;
-  margin-right: 5px;
-  background-color: #000;
-  padding: 0 13px;
+.info {
+  background-color: #fffd96;
+  padding: 15px;
+}
+
+.divider {
+  background-color: #e5e5e5;
+  height: 1px;
+  margin: 15px 0;
+  overflow: hidden;
+}
+
+.checkbox label:hover {
+  cursor: pointer;
 }
