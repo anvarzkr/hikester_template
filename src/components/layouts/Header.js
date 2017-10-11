@@ -39,7 +39,9 @@ export default class Header extends React.Component {
               </div>
               <div className="dropdown-content">
                 <ul>
-                  <li className="dropdown-item">Anvar Zakirov</li>
+                  <a href="/profile">
+                    <li className="dropdown-item">Anvar Zakirov</li>
+                  </a>
                   <li className="divider"></li>
                   <li className="dropdown-item">Notifications</li>
                   <li className="dropdown-item">My Events</li>

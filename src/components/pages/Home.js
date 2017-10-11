@@ -51,7 +51,7 @@ export default class Home extends React.Component {
     return (
       <div id="home-section" className="page-section container-fluid d-flex px-0">
         <div className="col-4 px-0" id="search-create">
-          <ul className="nav nav-tabs" role="tablist">
+          <ul className="tabs nav nav-tabs" role="tablist">
             <li className="nav-item col px-0">
               <a className="nav-link active" id="search-tab" data-toggle="tab" href="#search" role="tab" aria-controls="search" aria-expanded="true">Search</a>
             </li>

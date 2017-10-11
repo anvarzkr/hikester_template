@@ -104,6 +104,9 @@ export default class Event extends React.Component {
               <Participants participants={this.state.participants} />
             </div>
           </div>
+          <button className="button button-fluid">
+            Join
+          </button>
         </div>
         <div className="col-8 px-0">
           <Chat messages={this.state.messages}/>
